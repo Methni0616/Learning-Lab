@@ -8,22 +8,38 @@ public class JavaApplication1 {
 
         Scanner input = new Scanner(System.in);
 
-        System.out.print("Enter your marks: ");
-        int marks = input.nextInt();
+        System.out.println("===== STUDENT MENU =====");
+        System.out.println("1. View Profile");
+        System.out.println("2. View GPA");
+        System.out.println("3. View Course");
+        System.out.println("4. Exit");
 
-        if (marks >= 75) {
+        System.out.print("Select an option: ");
+        int choice = input.nextInt();
 
-            System.out.println("Result : Excellent");
+        switch (choice) {
 
-        }
-        else if (marks>=50 && marks<75) {
+            case 1:
+                System.out.println("===== STUDENT PROFILE =====");
+                System.out.println("Name   : Methni");
+                System.out.println("Age    : 23");
+                System.out.println("Degree : BSc (Hons) in Software Engineering");
+                break;
 
-            System.out.println("Result : pass");
+            case 2:
+                System.out.println("Current GPA : 3.48");
+                break;
 
-        }else {
+            case 3:
+                System.out.println("Current Course : BSc (Hons) in Software Engineering");
+                break;
 
-            System.out.println("Result : Fail");
+            case 4:
+                System.out.println("Good Bye!");
+                break;
 
+            default:
+                System.out.println("Invalid Option.");
         }
 
         input.close();
